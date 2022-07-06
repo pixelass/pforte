@@ -2,6 +2,7 @@
   "npmClient": "yarn",
   "packages": [
     "examples/*",
+    "examples/express/client",
     "packages/*"
   ],
   "useWorkspaces": true,

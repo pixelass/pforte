@@ -4951,12 +4951,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pforte/adapter-mongoose@0.1.0, @pforte/adapter-mongoose@workspace:packages/adapter-mongoose":
+"@pforte/adapter-mongoose@^0.0.2, @pforte/adapter-mongoose@workspace:packages/adapter-mongoose":
   version: 0.0.0-use.local
   resolution: "@pforte/adapter-mongoose@workspace:packages/adapter-mongoose"
   dependencies:
-    "@pforte/constants": 0.1.0
-    "@pforte/utils": 0.1.0
+    "@pforte/constants": ^0.0.2
+    "@pforte/utils": ^0.0.2
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     "@types/node": ^16.11.43
@@ -4969,29 +4969,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/client@0.1.0, @pforte/client@workspace:packages/client":
+"@pforte/client@^0.0.2, @pforte/client@workspace:packages/client":
   version: 0.0.0-use.local
   resolution: "@pforte/client@workspace:packages/client"
   dependencies:
-    "@pforte/constants": 0.1.0
+    "@pforte/constants": ^0.0.2
     axios: 0.27.2
     js-cookie: 3.0.1
     type-fest: ^2.16.0
   languageName: unknown
   linkType: soft
 
-"@pforte/constants@0.1.0, @pforte/constants@workspace:packages/constants":
+"@pforte/constants@^0.0.2, @pforte/constants@workspace:packages/constants":
   version: 0.0.0-use.local
   resolution: "@pforte/constants@workspace:packages/constants"
   languageName: unknown
   linkType: soft
 
-"@pforte/core@0.1.0, @pforte/core@workspace:packages/core":
+"@pforte/core@^0.0.2, @pforte/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@pforte/core@workspace:packages/core"
   dependencies:
-    "@pforte/constants": 0.1.0
-    "@pforte/utils": 0.1.0
+    "@pforte/constants": ^0.0.2
+    "@pforte/utils": ^0.0.2
     "@types/cookie": ^0.5.1
     "@types/node": ^16.11.43
     axios: 0.27.2
@@ -5002,11 +5002,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/provider-github@0.1.0, @pforte/provider-github@workspace:packages/provider-github":
+"@pforte/provider-github@^0.0.2, @pforte/provider-github@workspace:packages/provider-github":
   version: 0.0.0-use.local
   resolution: "@pforte/provider-github@workspace:packages/provider-github"
   dependencies:
-    "@pforte/constants": 0.1.0
+    "@pforte/constants": ^0.0.2
     "@types/node": ^16.11.43
     axios: 0.27.2
     js-cookie: 3.0.1
@@ -5014,11 +5014,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/react@0.1.0, @pforte/react@workspace:packages/react":
+"@pforte/react@^0.0.2, @pforte/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@pforte/react@workspace:packages/react"
   dependencies:
-    "@pforte/client": 0.1.0
+    "@pforte/client": ^0.0.2
     "@types/js-cookie": ^3.0.2
     js-cookie: 3.0.1
     react: ^18.2.0
@@ -5030,7 +5030,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/utils@0.1.0, @pforte/utils@workspace:packages/utils":
+"@pforte/utils@^0.0.2, @pforte/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@pforte/utils@workspace:packages/utils"
   dependencies:
@@ -7758,7 +7758,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.4.0, chokidar@npm:^3.4.2, chokidar@npm:^3.5.3":
+"chokidar@npm:^3.4.0, chokidar@npm:^3.4.2, chokidar@npm:^3.5.2, chokidar@npm:^3.5.3":
   version: 3.5.3
   resolution: "chokidar@npm:3.5.3"
   dependencies:
@@ -9289,6 +9289,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:16.0.1":
+  version: 16.0.1
+  resolution: "dotenv@npm:16.0.1"
+  checksum: f459ffce07b977b7f15d8cc4ee69cdff77d4dd8c5dc8c85d2d485ee84655352c2415f9dd09d42b5b5985ced3be186130871b34e2f3e2569ebc72fbc2e8096792
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^10.0.0":
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
@@ -10248,6 +10255,78 @@ __metadata:
   languageName: node
   linkType: hard
 
+"example-express-client@workspace:examples/express/client":
+  version: 0.0.0-use.local
+  resolution: "example-express-client@workspace:examples/express/client"
+  dependencies:
+    "@babel/cli": ^7.18.6
+    "@babel/core": ^7.18.6
+    "@babel/node": ^7.18.6
+    "@babel/plugin-transform-runtime": ^7.18.6
+    "@babel/preset-env": ^7.18.6
+    "@babel/preset-react": ^7.18.6
+    "@babel/preset-typescript": ^7.18.6
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
+    "@mui/icons-material": 5.8.4
+    "@mui/material": 5.8.7
+    "@pforte/adapter-mongoose": ^0.0.2
+    "@pforte/client": ^0.0.2
+    "@pforte/core": ^0.0.2
+    "@pforte/provider-github": ^0.0.2
+    "@pforte/react": ^0.0.2
+    "@types/mongodb": ^4.0.7
+    "@types/mongoose": ^5.11.97
+    axios: 0.27.2
+    dotenv: 16.0.1
+    express: 4.18.1
+    http-proxy-middleware: ^2.0.6
+    mongodb: ^4.7.0
+    mongoose: ^6.4.3
+    nanoid: 3.3.4
+    react: 18.2.0
+    react-dom: 18.2.0
+    react-scripts: ^5.0.1
+    zustand: ^4.0.0-rc.1
+  languageName: unknown
+  linkType: soft
+
+"example-express@workspace:examples/express":
+  version: 0.0.0-use.local
+  resolution: "example-express@workspace:examples/express"
+  dependencies:
+    "@babel/cli": ^7.18.6
+    "@babel/core": ^7.18.6
+    "@babel/node": ^7.18.6
+    "@babel/plugin-transform-runtime": ^7.18.6
+    "@babel/preset-env": ^7.18.6
+    "@babel/preset-react": ^7.18.6
+    "@babel/preset-typescript": ^7.18.6
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
+    "@mui/icons-material": 5.8.4
+    "@mui/material": 5.8.7
+    "@pforte/adapter-mongoose": ^0.0.2
+    "@pforte/client": ^0.0.2
+    "@pforte/core": ^0.0.2
+    "@pforte/provider-github": ^0.0.2
+    "@pforte/react": ^0.0.2
+    "@types/mongodb": ^4.0.7
+    "@types/mongoose": ^5.11.97
+    axios: 0.27.2
+    dotenv: 16.0.1
+    express: 4.18.1
+    mongodb: ^4.7.0
+    mongoose: ^6.4.3
+    nanoid: 3.3.4
+    nodemon: ^2.0.19
+    react: 18.2.0
+    react-dom: 18.2.0
+    react-scripts: ^5.0.1
+    zustand: ^4.0.0-rc.1
+  languageName: unknown
+  linkType: soft
+
 "example-vercel@workspace:examples/vercel":
   version: 0.0.0-use.local
   resolution: "example-vercel@workspace:examples/vercel"
@@ -10256,11 +10335,11 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.8.7
-    "@pforte/adapter-mongoose": 0.1.0
-    "@pforte/client": 0.1.0
-    "@pforte/core": 0.1.0
-    "@pforte/provider-github": 0.1.0
-    "@pforte/react": 0.1.0
+    "@pforte/adapter-mongoose": ^0.0.2
+    "@pforte/client": ^0.0.2
+    "@pforte/core": ^0.0.2
+    "@pforte/provider-github": ^0.0.2
+    "@pforte/react": ^0.0.2
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     axios: 0.27.2
@@ -10331,7 +10410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:^4.17.3":
+"express@npm:4.18.1, express@npm:^4.17.3":
   version: 4.18.1
   resolution: "express@npm:4.18.1"
   dependencies:
@@ -11526,7 +11605,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-proxy-middleware@npm:^2.0.3":
+"http-proxy-middleware@npm:^2.0.3, http-proxy-middleware@npm:^2.0.6":
   version: 2.0.6
   resolution: "http-proxy-middleware@npm:2.0.6"
   dependencies:
@@ -11644,6 +11723,13 @@ __metadata:
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 5144c0c9815e54ada181d80a0b810221a253562422e7c6c3a60b1901154184f49326ec239d618c416c1c5945a2e197107aee8d986a3dd836b53dffefd99b5e7e
+  languageName: node
+  linkType: hard
+
+"ignore-by-default@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "ignore-by-default@npm:1.0.1"
+  checksum: 441509147b3615e0365e407a3c18e189f78c07af08564176c680be1fabc94b6c789cad1342ad887175d4ecd5225de86f73d376cec8e06b42fd9b429505ffcf8a
   languageName: node
   linkType: hard
 
@@ -14711,6 +14797,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nodemon@npm:^2.0.19":
+  version: 2.0.19
+  resolution: "nodemon@npm:2.0.19"
+  dependencies:
+    chokidar: ^3.5.2
+    debug: ^3.2.7
+    ignore-by-default: ^1.0.1
+    minimatch: ^3.0.4
+    pstree.remy: ^1.1.8
+    semver: ^5.7.1
+    simple-update-notifier: ^1.0.7
+    supports-color: ^5.5.0
+    touch: ^3.1.0
+    undefsafe: ^2.0.5
+  bin:
+    nodemon: bin/nodemon.js
+  checksum: c6cf89435a8945693fac2701285eb1f539b5003d943a1be89a9ffbfc9d0275aa7779f85a9eee509e9f19a988d53ce293266d8b35b91010e36ad9e78683f8eb07
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^5.0.0":
   version: 5.0.0
   resolution: "nopt@npm:5.0.0"
@@ -14719,6 +14825,17 @@ __metadata:
   bin:
     nopt: bin/nopt.js
   checksum: d35fdec187269503843924e0114c0c6533fb54bbf1620d0f28b4b60ba01712d6687f62565c55cc20a504eff0fbe5c63e22340c3fad549ad40469ffb611b04f2f
+  languageName: node
+  linkType: hard
+
+"nopt@npm:~1.0.10":
+  version: 1.0.10
+  resolution: "nopt@npm:1.0.10"
+  dependencies:
+    abbrev: 1
+  bin:
+    nopt: ./bin/nopt.js
+  checksum: f62575aceaa3be43f365bf37a596b89bbac2e796b001b6d2e2a85c2140a4e378ff919e2753ccba959c4fd344776fc88c29b393bc167fa939fb1513f126f4cd45
   languageName: node
   linkType: hard
 
@@ -16801,6 +16918,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pstree.remy@npm:^1.1.8":
+  version: 1.1.8
+  resolution: "pstree.remy@npm:1.1.8"
+  checksum: 5cb53698d6bb34dfb278c8a26957964aecfff3e161af5fbf7cee00bbe9d8547c7aced4bd9cb193bce15fb56e9e4220fc02a5bf9c14345ffb13a36b858701ec2d
+  languageName: node
+  linkType: hard
+
 "pump@npm:^3.0.0":
   version: 3.0.0
   resolution: "pump@npm:3.0.0"
@@ -17897,7 +18021,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.0.0":
+"semver@npm:7.0.0, semver@npm:~7.0.0":
   version: 7.0.0
   resolution: "semver@npm:7.0.0"
   bin:
@@ -18067,6 +18191,15 @@ __metadata:
   version: 3.0.7
   resolution: "signal-exit@npm:3.0.7"
   checksum: a2f098f247adc367dffc27845853e9959b9e88b01cb301658cfe4194352d8d2bb32e18467c786a7fe15f1d44b233ea35633d076d5e737870b7139949d1ab6318
+  languageName: node
+  linkType: hard
+
+"simple-update-notifier@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "simple-update-notifier@npm:1.0.7"
+  dependencies:
+    semver: ~7.0.0
+  checksum: aaadc1f158ad5101b363d1c7aed1f30fc1cac59a760aa31702633e0e6fe423348f07d0e78185aef0aad29130a7b7f0f188c21c7bc7353f897a0ea3682e051a70
   languageName: node
   linkType: hard
 
@@ -18650,7 +18783,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^5.3.0":
+"supports-color@npm:^5.3.0, supports-color@npm:^5.5.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
   dependencies:
@@ -19017,6 +19150,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"touch@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "touch@npm:3.1.0"
+  dependencies:
+    nopt: ~1.0.10
+  bin:
+    nodetouch: ./bin/nodetouch.js
+  checksum: e0be589cb5b0e6dbfce6e7e077d4a0d5f0aba558ef769c6d9c33f635e00d73d5be49da6f8631db302ee073919d82b5b7f56da2987feb28765c95a7673af68647
+  languageName: node
+  linkType: hard
+
 "tough-cookie@npm:^4.0.0":
   version: 4.0.0
   resolution: "tough-cookie@npm:4.0.0"
@@ -19360,6 +19504,13 @@ __metadata:
     has-symbols: ^1.0.3
     which-boxed-primitive: ^1.0.2
   checksum: b7a1cf5862b5e4b5deb091672ffa579aa274f648410009c81cca63fed3b62b610c4f3b773f912ce545bb4e31edc3138975b5bc777fc6e4817dca51affb6380e9
+  languageName: node
+  linkType: hard
+
+"undefsafe@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "undefsafe@npm:2.0.5"
+  checksum: f42ab3b5770fedd4ada175fc1b2eb775b78f609156f7c389106aafd231bfc210813ee49f54483d7191d7b76e483bc7f537b5d92d19ded27156baf57592eb02cc
   languageName: node
   linkType: hard
 

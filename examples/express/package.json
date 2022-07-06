@@ -1,0 +1,50 @@
+{
+  "name": "example-express",
+  "version": "0.0.2",
+  "description": "Vercel example for pforte",
+  "keywords": [],
+  "homepage": "https://pixelass.github.io/pforte",
+  "bugs": {
+    "url": "https://github.com/pixelass/pforte/issues"
+  },
+  "repository": "git@github.com:pixelass/pforte.git",
+  "author": "Gregor Adams <greg@pixelass.com>",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "start": "babel-node server/index.ts -x '.ts'",
+    "watch": "nodemon --exec 'yarn start'"
+  },
+  "dependencies": {
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "@mui/icons-material": "5.8.4",
+    "@mui/material": "5.8.7",
+    "@pforte/adapter-mongoose": "^0.0.2",
+    "@pforte/client": "^0.0.2",
+    "@pforte/core": "^0.0.2",
+    "@pforte/provider-github": "^0.0.2",
+    "@pforte/react": "^0.0.2",
+    "axios": "0.27.2",
+    "dotenv": "16.0.1",
+    "express": "4.18.1",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.4.3",
+    "nanoid": "3.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zustand": "^4.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/mongodb": "^4.0.7",
+    "@types/mongoose": "^5.11.97",
+    "nodemon": "^2.0.19",
+    "react-scripts": "^5.0.1"
+  }
+}

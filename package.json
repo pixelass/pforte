@@ -9,6 +9,7 @@
   "main": "index.js",
   "workspaces": [
     "examples/*",
+    "examples/express/client",
     "packages/*"
   ],
   "scripts": {
