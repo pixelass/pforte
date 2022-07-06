@@ -17,16 +17,16 @@
     "clean": "yarn dlx lerna run clean",
     "predev": "yarn clean; yarn setup --build",
     "dev": "yarn predev && yarn dlx lerna run --ignore=example-vercel watch --parallel",
-    "postinstall": "yarn dlx husky install; npm run setup",
+    "postinstall": "yarn dlx husky install; yarn setup",
     "ncu:major": "yarn dlx npm-check-updates",
     "ncu:minor": "yarn dlx npm-check-updates -t minor",
     "ncu:patch": "yarn dlx npm-check-updates -t patch",
     "prepublishOnly": "yarn build",
-    "prerelease": "yarn dlx run build",
+    "prerelease": "yarn build",
     "release": "yarn prerelease && lerna publish --conventional-commits",
     "setup": "babel-node prepare/init.ts -x '.ts'",
     "spj": "yarn dlx sort-package-json@1.48 package.json './packages/*/*/package.json' './examples/*/*/package.json'",
-    "start": "yarn prestart && yarn dlx lerna run start --scope=example-vercel --stream"
+    "example:vercel": "yarn dlx lerna run start --scope=example-vercel --stream"
   },
   "dependencies": {
     "@babel/cli": "^7.18.6",
