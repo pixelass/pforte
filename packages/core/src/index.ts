@@ -27,7 +27,7 @@ export function setCookie(response, cookie) {
 }
 
 export function extendHandler({ request, response, maxAge }) {
-	const cookies = Object.entries(request.cookies).map(([name, value]) => ({
+	const cookies = Object.entries(request.cookies ?? {}).map(([name, value]) => ({
 		name,
 		value,
 		options: {},
@@ -99,24 +99,28 @@ export default function pforte({ adapter, providers, maxAge = DEFAULT_MAX_AGE })
 	const callbackPath = [host, CALLBACK_PATH].join("/");
 
 	return async function pforteHandler(request, response) {
-		const { query } = request;
+		const { query, method } = request;
 		switch (query.pforte) {
 			case "session":
-				await handleSession({ request }, adapter).then(user => {
-					response.status(200).json({
-						success: true,
-						data: user
-							? {
-									user: {
-										id: user._id,
-										name: user.name,
-										email: user.email,
-										image: user.image,
-									},
-							  }
-							: null,
+				if (method === "POST") {
+					await handleSession({ request }, adapter).then(user => {
+						response.status(200).json({
+							success: true,
+							data: user
+								? {
+										user: {
+											id: user._id,
+											name: user.name,
+											email: user.email,
+											image: user.image,
+										},
+								  }
+								: null,
+						});
 					});
-				});
+				} else {
+					response.status(404).send("Not Found");
+				}
 				break;
 			case "signin":
 				response.status(200).json({
@@ -155,7 +159,8 @@ export default function pforte({ adapter, providers, maxAge = DEFAULT_MAX_AGE })
 							response.status(302).setHeader("Location", callbackPath).end();
 						})
 						.catch(error => {
-							response.status(error.response.status).send(error.message);
+							console.error(error);
+							//response.status(error.response.status).send(error.message);
 						});
 				} catch (error) {
 					console.error(error);
