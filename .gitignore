@@ -71,3 +71,7 @@ node_modules/
 
 # Build
 dist
+
+# IDE
+.vscode
+.idea
