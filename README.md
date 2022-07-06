@@ -13,7 +13,7 @@ but should work with many other frameworks or setup, since it is framework-agnos
 
 Please take a look at [the Vercel example](./examples/vercel)
 
-## Why should I not use this in production
+## Why should I not use this in production?
 
 This library is currently a proof of concept and is potentially unsafe.
 If you want to help improve the security or just want to review the code, we would be very happy
