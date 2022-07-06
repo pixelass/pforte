@@ -1,0 +1,49 @@
+{
+  "name": "@pforte/core",
+  "version": "0.0.1",
+  "description": "Utilities for web auth",
+  "keywords": [
+    "auth",
+    "singin",
+    "login",
+    "social-login",
+    "authorization",
+    "serverless"
+  ],
+  "homepage": "https://pixelass.github.io/pforte",
+  "bugs": {
+    "url": "https://github.com/pixelass/pforte/issues"
+  },
+  "repository": "git@github.com:pixelass/pforte.git",
+  "author": "Gregor Adams <greg@pixelass.com>",
+  "license": "AGPL-3.0-or-later",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "parcel build",
+    "clean": "yarn dlx rimraf dist",
+    "watch": "parcel watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@pforte/constants": "0.0.1",
+    "@pforte/utils": "0.0.1",
+    "@types/cookie": "^0.5.1",
+    "@types/node": "^16.11.43",
+    "axios": "0.27.2",
+    "cookie": "0.5.0",
+    "js-cookie": "3.0.1",
+    "nanoid": "3.3.4",
+    "type-fest": "^2.16.0"
+  },
+  "engines": {
+    "node": ">= 14"
+  }
+}

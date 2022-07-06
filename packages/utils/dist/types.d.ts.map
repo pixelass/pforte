@@ -1,0 +1,1 @@
+{"mappings":"AAAA,kCAAkC,GAAG,EAAE,MAAM,QAG5C","sources":["packages/utils/src/src/index.ts","packages/utils/src/index.ts"],"sourcesContent":[null,"export function getExpirationDate(age: number) {\n\tconst now = new Date();\n\treturn new Date(+now + age * 1000);\n}\n"],"names":[],"version":3,"file":"types.d.ts.map"}

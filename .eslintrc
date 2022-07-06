@@ -1,0 +1,32 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "react-app"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [ "react", "react-hooks", "jest", "unicorn"],
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "import/order": [
+      2,
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ]
+  }
+}
