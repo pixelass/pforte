@@ -1,6 +1,6 @@
 {
   "name": "@pforte/adapter-mongoose",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for web auth",
   "keywords": [
     "adapter",
@@ -33,8 +33,8 @@
     "watch": "parcel watch"
   },
   "dependencies": {
-    "@pforte/constants": "0.0.1",
-    "@pforte/utils": "0.0.1",
+    "@pforte/constants": "^0.0.2",
+    "@pforte/utils": "^0.0.2",
     "@types/mongodb": "^4.0.7",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^16.11.43",
