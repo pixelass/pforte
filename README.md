@@ -5,8 +5,9 @@ Entry not guaranteed
 
 ## Why do I need this?
 
-Pforte attempts to do what [next-auth](https://next-auth.js.org/) does, but is intended to be used with
-[Vercel serverless functions](https://vercel.com/docs/concepts/functions/serverless-functions)
+Pforte attempts to do what [next-auth](https://next-auth.js.org/) does, but is intended to be used
+with [Vercel serverless functions](https://vercel.com/docs/concepts/functions/serverless-functions),
+but should work with many other frameworks or setup, since it is framework-agnostic.
 
 ## How can I use this?
 
