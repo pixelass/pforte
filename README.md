@@ -1,4 +1,6 @@
-# pforte [ˈpfɔrtə]
+# Pforte [ˈpfɔrtə]
+
+<p align="center"><img src="./docs/assets/logo.svg" alt="logo" width="50%"/></p>
 
 Entry not guaranteed
 
