@@ -1,5 +1,5 @@
-import {ObjectId} from 'mongodb';
-import mongoose from 'mongoose';
+import { ObjectId } from "mongodb";
+import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
 	name: {
@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema({
 	},
 });
 
-export const User = mongoose.models.User || mongoose.model('User', UserSchema);
+export const User = mongoose.models.User || mongoose.model("User", UserSchema);
 
 const SessionSchema = new mongoose.Schema({
 	sessionToken: {
@@ -33,7 +33,7 @@ const SessionSchema = new mongoose.Schema({
 	},
 });
 
-export const Session = mongoose.models.Session || mongoose.model('Session', SessionSchema);
+export const Session = mongoose.models.Session || mongoose.model("Session", SessionSchema);
 
 const AccountSchema = new mongoose.Schema({
 	provider: {
@@ -78,4 +78,4 @@ const AccountSchema = new mongoose.Schema({
 	},
 });
 
-export const Account = mongoose.models.Account || mongoose.model('Account', AccountSchema);
+export const Account = mongoose.models.Account || mongoose.model("Account", AccountSchema);
