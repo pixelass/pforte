@@ -1,3 +1,6 @@
+/**
+ * Copied from here: https://github.com/vercel/next.js/blob/canary/examples/with-mongodb-mongoose/lib/dbConnect.js
+ */
 import { config } from "dotenv";
 import mongoose from "mongoose";
 
