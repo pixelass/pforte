@@ -12,6 +12,9 @@ import { nanoid } from "nanoid";
 
 import createCSRFToken from "./csrf-token";
 
+/**
+ * Copied from https://github.com/nextauthjs/next-auth/blob/2469e44572f23f709fa8c5c65c6b7a4eb2383e9f/packages/next-auth/src/next/utils.ts
+ */
 export function setCookie(response, cookie) {
 	// Preserve any existing cookies that have already been set in the same session
 	let setCookieHeader = response.getHeader("Set-Cookie") ?? [];

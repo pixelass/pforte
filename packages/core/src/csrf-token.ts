@@ -10,6 +10,7 @@ interface CreateCSRFTokenParams {
 }
 
 /**
+ * Copied from https://github.com/nextauthjs/next-auth/blob/2469e44572f23f709fa8c5c65c6b7a4eb2383e9f/packages/next-auth/src/core/lib/csrf-token.ts
  * Ensure CSRF Token cookie is set for any subsequent requests.
  * Used as part of the strategy for mitigation for CSRF tokens.
  *
