@@ -167,11 +167,10 @@ export default function pforte({ adapter, providers, maxAge = DEFAULT_MAX_AGE })
 							response.status(302).setHeader("Location", callbackPath).end();
 						})
 						.catch(error => {
-							console.error(error);
-							//response.status(error.response.status).send(error.message);
+							response.status(error.response.status).send(error.message);
 						});
 				} catch (error) {
-					console.error(error);
+					response.status(error.response.status).send(error.message);
 				}
 				break;
 			default:
