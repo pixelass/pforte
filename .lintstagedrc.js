@@ -1,3 +1,4 @@
 module.exports = {
-	"*.{js,ts,tsx}": ["eslint --fix", "prettier --write"],
+	"*.{js,ts,tsx}": ["yarn dlx eslint --fix", "yarn dlx prettier --write"],
+	"*.md": ["yarn dlx prettier --write"],
 };
