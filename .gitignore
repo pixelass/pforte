@@ -75,3 +75,7 @@ dist
 # IDE
 .vscode
 .idea
+
+# Generated
+
+/tsconfig.json
