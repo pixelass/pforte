@@ -14,10 +14,10 @@
   ],
   "scripts": {
     "prebuild": "yarn clean; yarn setup --build",
-    "build": "yarn prebuild && yarn dlx lerna run --ignore=example-vercel build --parallel",
+    "build": "yarn prebuild && yarn dlx lerna run --ignore='example-*' build --parallel",
     "clean": "yarn dlx lerna run clean",
     "predev": "yarn clean; yarn setup --build",
-    "dev": "yarn predev && yarn dlx lerna run --ignore=example-vercel watch --parallel",
+    "dev": "yarn predev && yarn dlx lerna run --ignore='example-*' watch --parallel",
     "postinstall": "yarn dlx husky install; yarn setup",
     "ncu:major": "yarn dlx npm-check-updates",
     "ncu:minor": "yarn dlx npm-check-updates -t minor",
@@ -27,6 +27,7 @@
     "release": "yarn prerelease && lerna publish --conventional-commits",
     "setup": "babel-node prepare/init.ts -x '.ts'",
     "spj": "yarn dlx sort-package-json@1.48 package.json './packages/*/*/package.json' './examples/*/*/package.json'",
+    "example:express": "yarn dlx lerna run start --scope=example-express --stream",
     "example:vercel": "yarn dlx lerna run start --scope=example-vercel --stream"
   },
   "dependencies": {
