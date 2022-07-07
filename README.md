@@ -1,4 +1,4 @@
-# pforte <small><small><small>[ˈpfɔrtə]</small></small></small>
+# pforte [ˈpfɔrtə]
 
 Entry not guaranteed
 
