@@ -43,6 +43,10 @@ export function extendHandler({ request, response, maxAge }) {
 		value: sessionToken,
 		options: {
 			path: "/",
+			secure: process.env.NODE_ENV === "production",
+			httpOnly: process.env.NODE_ENV === "production",
+			hostOnly: process.env.NODE_ENV === "production",
+			sameSite: "Lax",
 			expires,
 		},
 	});
@@ -51,7 +55,10 @@ export function extendHandler({ request, response, maxAge }) {
 		value: csrfToken.cookie,
 		options: {
 			path: "/",
-			expires,
+			secure: process.env.NODE_ENV === "production",
+			httpOnly: process.env.NODE_ENV === "production",
+			hostOnly: process.env.NODE_ENV === "production",
+			sameSite: "Lax",
 		},
 	});
 	cookies.forEach(cookie => setCookie(response, cookie));
