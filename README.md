@@ -1,4 +1,5 @@
-# pforte
+# pforte <small><small><small>[ˈpfɔrtə]</small></small></small>
+
 Entry not guaranteed
 
 > WARNING: Please do not use this in production until this message has been removed
@@ -6,15 +7,18 @@ Entry not guaranteed
 ## Why do I need this?
 
 Pforte attempts to do what [next-auth](https://next-auth.js.org/) does, but is fully
-framework-agnostic. 
+framework-agnostic.
 The main purpose was better support for [Vercel serverless functions](https://vercel.com/docs/concepts/functions/serverless-functions),
 but it should work with many other frameworks or setups (i.e. express.js).
 
 ## How can I use this?
 
-> The documentation still needs to be written. Until then please take a look at the examples.
+> We are still improving the documentation.
+
+Please check [the wiki](https://github.com/pixelass/pforte/wiki)
 
 We added two simple examples:
+
 - [Vercel example](./examples/vercel)
 - [Express example](./examples/express)
 
