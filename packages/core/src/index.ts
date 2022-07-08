@@ -1,3 +1,4 @@
+import type { IncomingMessage, ServerResponse } from "http";
 import process from "node:process";
 
 import {
@@ -7,17 +8,90 @@ import {
 	DEFAULT_MAX_AGE,
 } from "@pforte/constants";
 import { getExpirationDate } from "@pforte/utils";
-import { serialize } from "cookie";
+import { CookieSerializeOptions, serialize } from "cookie";
 import { nanoid } from "nanoid";
 
 import createCSRFToken from "./csrf-token";
 
+export type MaybeArray<T> = T | T[];
+
+/**
+ * Send body of response
+ */
+type Send<T> = (body: T) => void;
+/**
+ * Next `API` route request
+ */
+export interface ApiRequest extends IncomingMessage {
+	/**
+	 * Object of `query` values from url
+	 */
+	query: Partial<{
+		[key: string]: string | string[];
+	}>;
+	/**
+	 * Object of `cookies` from header
+	 */
+	cookies: Partial<{
+		[key: string]: string;
+	}>;
+
+	body: any;
+}
+
+/**
+ * Next `API` route response
+ */
+export type ApiResponse<T = any> = ServerResponse & {
+	/**
+	 * Send data `any` data in response
+	 */
+	send: Send<T>;
+	/**
+	 * Send data `json` data in response
+	 */
+	json: Send<T>;
+	status: (statusCode: number) => ApiResponse<T>;
+};
+
+/**
+ * Next `API` route handler
+ */
+export type ApiHandler<T = any> = (
+	req: ApiRequest,
+	res: ApiResponse<T>
+) => unknown | Promise<unknown>;
+
+interface User {
+	_id: string;
+	name: string;
+	email: string | null;
+	image: string | null;
+}
+
+interface Provider {
+	url: string;
+	name: string;
+	connect({ request: ApiRequest }): Promise<{ accessToken: string; user: User }>;
+}
+
+interface Adapter {
+	(name: "session", payload: any): Promise<User>;
+	(name: "user", payload: any): Promise<unknown>;
+}
+
+export interface CookieConfig {
+	name: string;
+	value: string;
+	options: CookieSerializeOptions;
+}
+
 /**
  * Copied from https://github.com/nextauthjs/next-auth/blob/2469e44572f23f709fa8c5c65c6b7a4eb2383e9f/packages/next-auth/src/next/utils.ts
  */
-export function setCookie(response, cookie) {
+export function setCookie(response: ApiResponse, cookie: CookieConfig) {
 	// Preserve any existing cookies that have already been set in the same session
-	let setCookieHeader = response.getHeader("Set-Cookie") ?? [];
+	let setCookieHeader: MaybeArray<string | number> = response.getHeader("Set-Cookie") ?? [];
 	// If not an array (i.e. a string with a single cookie) convert to array
 	if (!Array.isArray(setCookieHeader)) {
 		setCookieHeader = [setCookieHeader];
@@ -26,51 +100,66 @@ export function setCookie(response, cookie) {
 	const cookieHeader = serialize(name, value, options);
 
 	setCookieHeader.push(cookieHeader);
-	response.setHeader("Set-Cookie", setCookieHeader);
+	response.setHeader(
+		"Set-Cookie",
+		setCookieHeader.map(item => `${item}`)
+	);
 }
 
-export function extendHandler({ request, response, maxAge }) {
-	const cookies = Object.entries(request.cookies ?? {}).map(([name, value]) => ({
-		name,
-		value,
-		options: {},
-	}));
+export function extendHandler({
+	request,
+	response,
+	maxAge,
+}: {
+	request: ApiRequest;
+	response: ApiResponse;
+	maxAge: number;
+}) {
+	const cookies = Object.entries(request.cookies ?? {}).map(
+		([name, value]: [string, string]) => ({
+			name,
+			value,
+			options: {},
+		})
+	);
 	const sessionToken = nanoid();
 	const csrfToken = createCSRFToken({
 		options: { secret: process.env.PFORTE_SECRET || "pforte-secret" },
 		isPost: false,
 	});
 	const expires = getExpirationDate(maxAge);
-	cookies.push({
-		name: AUTH_SESSION_COOKIE,
-		value: sessionToken,
-		options: {
-			path: "/",
-			secure: process.env.NODE_ENV === "production",
-			httpOnly: process.env.NODE_ENV === "production",
-			hostOnly: process.env.NODE_ENV === "production",
-			sameSite: "Lax",
-			expires,
+	cookies.push(
+		{
+			name: AUTH_SESSION_COOKIE,
+			value: sessionToken,
+			options: {
+				path: "/",
+				secure: process.env.NODE_ENV === "production",
+				httpOnly: process.env.NODE_ENV === "production",
+				hostOnly: process.env.NODE_ENV === "production",
+				sameSite: "Lax",
+				expires,
+			},
 		},
-	});
-	cookies.push({
-		name: AUTH_CSRF_COOKIE,
-		value: csrfToken.cookie,
-		options: {
-			path: "/",
-			secure: process.env.NODE_ENV === "production",
-			httpOnly: process.env.NODE_ENV === "production",
-			hostOnly: process.env.NODE_ENV === "production",
-			sameSite: "Lax",
-		},
-	});
+		{
+			name: AUTH_CSRF_COOKIE,
+			value: csrfToken.cookie,
+			options: {
+				path: "/",
+				secure: process.env.NODE_ENV === "production",
+				httpOnly: process.env.NODE_ENV === "production",
+				hostOnly: process.env.NODE_ENV === "production",
+				sameSite: "Lax",
+			},
+		}
+	);
 	cookies.forEach(cookie => setCookie(response, cookie));
 	return { sessionToken, csrfToken, expires };
 }
 
-export async function handleSession({ request }, adapter) {
+export async function handleSession({ request }: { request: ApiRequest }, adapter: Adapter) {
 	if (adapter) {
-		const cookieValue = request.cookies[AUTH_CSRF_COOKIE];
+		const cookieValue: string = request.cookies[AUTH_CSRF_COOKIE];
 		const { sessionToken, csrfToken } = request.body;
 		const [bodyValue] = csrfToken.split("|");
 		const { csrfTokenVerified } = createCSRFToken({
@@ -86,7 +175,7 @@ export async function handleSession({ request }, adapter) {
 	}
 }
 
-export function handleSignOut({ response }) {
+export function handleSignOut({ response }: { response: ApiResponse }) {
 	setCookie(response, {
 		name: AUTH_SESSION_COOKIE,
 		value: "",
@@ -105,7 +194,15 @@ export function handleSignOut({ response }) {
 	});
 }
 
-export default function pforte({ adapter, providers, maxAge = DEFAULT_MAX_AGE }) {
+export default function pforte({
+	adapter,
+	providers,
+	maxAge = DEFAULT_MAX_AGE,
+}: {
+	adapter: Adapter;
+	providers: Provider[];
+	maxAge?: number;
+}): ApiHandler {
 	const host = process.env.PFORTE_URL || process.env.VERCEL_URL || "http://localhost:3000";
 	const callbackPath = [host, CALLBACK_PATH].join("/");
 
