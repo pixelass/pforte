@@ -7,18 +7,23 @@ import {
 	CALLBACK_PATH,
 	DEFAULT_MAX_AGE,
 } from "@pforte/constants";
+import { GithubAccessToken } from "@pforte/provider-github";
 import { getExpirationDate } from "@pforte/utils";
 import { CookieSerializeOptions, serialize } from "cookie";
 import { nanoid } from "nanoid";
 
 import createCSRFToken from "./csrf-token";
 
+/**
+ * Array or item helper
+ */
 export type MaybeArray<T> = T | T[];
 
 /**
  * Send body of response
  */
-type Send<T> = (body: T) => void;
+export type Send<T> = (body: T) => void;
+
 /**
  * Next `API` route request
  */
@@ -55,31 +60,43 @@ export type ApiResponse<T = any> = ServerResponse & {
 };
 
 /**
- * Next `API` route handler
+ * `API` route handler
  */
 export type ApiHandler<T = any> = (
 	req: ApiRequest,
 	res: ApiResponse<T>
 ) => unknown | Promise<unknown>;
 
-interface User {
+/**
+ * Mongodb User model
+ */
+export interface User {
 	_id: string;
 	name: string;
 	email: string | null;
 	image: string | null;
 }
 
-interface Provider {
+/**
+ * Auth provider
+ */
+export interface Provider {
 	url: string;
 	name: string;
-	connect({ request: ApiRequest }): Promise<{ accessToken: string; user: User }>;
+	connect({ request: ApiRequest }): Promise<{ accessToken: GithubAccessToken; user: User }>;
 }
 
-interface Adapter {
+/**
+ * Storage adapter
+ */
+export interface Adapter {
 	(name: "session", payload: any): Promise<User>;
 	(name: "user", payload: any): Promise<unknown>;
 }
 
+/**
+ * Configuration for cookies
+ */
 export interface CookieConfig {
 	name: string;
 	value: string;
@@ -88,6 +105,9 @@ export interface CookieConfig {
 
 /**
  * Copied from https://github.com/nextauthjs/next-auth/blob/2469e44572f23f709fa8c5c65c6b7a4eb2383e9f/packages/next-auth/src/next/utils.ts
+ *
+ * @param response
+ * @param cookie
  */
 export function setCookie(response: ApiResponse, cookie: CookieConfig) {
 	// Preserve any existing cookies that have already been set in the same session
@@ -106,6 +126,14 @@ export function setCookie(response: ApiResponse, cookie: CookieConfig) {
 	);
 }
 
+/**
+ * Extends the handler with new cookies.
+ * Creates a Session cookie and a CSRF cookie
+ *
+ * @param request
+ * @param response
+ * @param maxAge
+ */
 export function extendHandler({
 	request,
 	response,
@@ -157,7 +185,14 @@ export function extendHandler({
 	return { sessionToken, csrfToken, expires };
 }
 
+/**
+ * Handle the session request
+ *
+ * @param request
+ * @param adapter
+ */
 export async function handleSession({ request }: { request: ApiRequest }, adapter: Adapter) {
+	// Sessions require an adapter
 	if (adapter) {
 		const cookieValue: string = request.cookies[AUTH_CSRF_COOKIE];
 		const { sessionToken, csrfToken } = request.body;
@@ -169,12 +204,19 @@ export async function handleSession({ request }: { request: ApiRequest }, adapte
 			bodyValue,
 		});
 
+		// Only use the adapter when the toke is verified
 		return csrfTokenVerified ? await adapter("session", { sessionToken, csrfToken }) : null;
 	} else {
 		return null;
 	}
 }
 
+/**
+ * Handle the sign-out request
+ * Expires the Session cookie and the CSRF cookie
+ *
+ * @param response
+ */
 export function handleSignOut({ response }: { response: ApiResponse }) {
 	setCookie(response, {
 		name: AUTH_SESSION_COOKIE,
@@ -194,6 +236,13 @@ export function handleSignOut({ response }: { response: ApiResponse }) {
 	});
 }
 
+/**
+ * A factory that provides an auth handler.
+ *
+ * @param adapter
+ * @param providers
+ * @param maxAge
+ */
 export default function pforte({
 	adapter,
 	providers,
@@ -210,6 +259,7 @@ export default function pforte({
 		const { query, method } = request;
 		switch (query.pforte) {
 			case "session":
+				// Session requests require a post since we want to verify the request
 				if (method === "POST") {
 					await handleSession({ request }, adapter).then(user => {
 						response.status(200).json({
@@ -231,15 +281,18 @@ export default function pforte({
 				}
 				break;
 			case "signin":
+				// Signin requests are responded with the auth url of the provider
 				response.status(200).json({
 					url: providers.find(provider_ => provider_.name === query.provider).url,
 				});
 				break;
 			case "signout":
+				// Sign-out expires cookies and forces a page reload
 				handleSignOut({ response });
 				response.status(302).setHeader("Location", callbackPath).end();
 				break;
 			case "callback":
+				// Redirect to the host
 				response.status(302).setHeader("Location", host).end();
 				break;
 			case "github":
