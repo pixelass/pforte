@@ -70,13 +70,13 @@ export function extendHandler({ request, response, maxAge }) {
 
 export async function handleSession({ request }, adapter) {
 	if (adapter) {
-		const csrfTokenCookie = request.cookies[AUTH_CSRF_COOKIE];
+		const cookieValue = request.cookies[AUTH_CSRF_COOKIE];
 		const { sessionToken, csrfToken } = request.body;
 		const [bodyValue] = csrfToken.split("|");
 		const { csrfTokenVerified } = createCSRFToken({
 			options: { secret: process.env.PFORTE_SECRET || "pforte-secret" },
 			isPost: true,
-			cookieValue: csrfTokenCookie,
+			cookieValue,
 			bodyValue,
 		});
 
