@@ -1,10 +1,65 @@
-import process from "node:process";
-
 import { getExpirationDate } from "@pforte/utils";
 
 import { Account, Session, User } from "./models";
 
-async function getUser({ user, accessToken, sessionToken, maxAge }) {
+/**
+ * GitHub specific access token
+ */
+export interface GithubAccessToken {
+	access_token: string;
+	scope: string;
+	token_type: string;
+}
+/**
+ * GitHub User model
+ */
+export interface GitHubUserType {
+	id: string;
+	name: string;
+	email: string | null;
+	avatar_url: string | null;
+}
+
+/**
+ * User model
+ */
+export interface UserType {
+	id: string;
+	name: string;
+	email: string | null;
+	image: string | null;
+}
+
+interface AccessToken {
+	access_token: string;
+	expires_at: string;
+	refresh_token: string;
+	refresh_token_expires_in: string;
+	token_type: string;
+	scope: string;
+}
+
+interface GetUserProps {
+	user: GitHubUserType;
+	accessToken: AccessToken;
+	sessionToken: string;
+	maxAge: number;
+}
+
+/**
+ * Storage adapter
+ */
+export interface Adapter {
+	(name: "session", payload: GetUserProps): Promise<UserType>;
+	(name: "user", payload: { sessionToken: string }): Promise<{ user: UserType } | null>;
+}
+
+async function getUser({
+	user,
+	accessToken,
+	sessionToken,
+	maxAge,
+}: GetUserProps): Promise<{ user: UserType }> {
 	// Check for an existing account
 	const existingAccount = await Account.findOne({
 		providerAccountId: user.id,
@@ -32,7 +87,7 @@ async function getUser({ user, accessToken, sessionToken, maxAge }) {
 			// Then create a new session
 			await Session.create({
 				sessionToken,
-				userId: existingUser._id,
+				userId: existingUser._idn,
 				expires,
 			});
 
@@ -87,7 +142,7 @@ async function getUser({ user, accessToken, sessionToken, maxAge }) {
 	};
 }
 
-async function getSession({ sessionToken }) {
+async function getSession({ sessionToken }: { sessionToken: string }): Promise<UserType | null> {
 	const existingSession = await Session.findOne({
 		sessionToken,
 	});
@@ -104,20 +159,23 @@ async function getSession({ sessionToken }) {
 	}
 }
 
-export default function mongooseAdapter(connect) {
-	return async function adapter(type, payload) {
+export default function mongooseAdapter(connect: () => Promise<void>): Adapter {
+	return async function adapter(
+		type: "session" | "user",
+		payload: GetUserProps | { sessionToken: string }
+	) {
 		await connect();
 		switch (type) {
 			case "user":
 				// Payload:
 				// { user, accessToken, sessionToken, maxAge }
-				return getUser(payload);
+				return getUser(payload as GetUserProps);
 			case "session":
 				// Payload:
 				// { sessionToken }
-				return getSession(payload);
+				return getSession(payload as { sessionToken: string });
 			default:
 				break;
 		}
-	};
+	} as Adapter;
 }
