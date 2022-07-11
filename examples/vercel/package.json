@@ -28,11 +28,11 @@
     "@pforte/react": "^0.0.2",
     "axios": "0.27.2",
     "mongodb": "^4.7.0",
-    "mongoose": "^6.4.3",
+    "mongoose": "^6.4.4",
     "nanoid": "3.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "vercel": "25.2.3",
+    "vercel": "27.0.1",
     "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {

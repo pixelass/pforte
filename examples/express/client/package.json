@@ -27,7 +27,7 @@
     "dotenv": "16.0.1",
     "express": "4.18.1",
     "mongodb": "^4.7.0",
-    "mongoose": "^6.4.3",
+    "mongoose": "^6.4.4",
     "nanoid": "3.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",

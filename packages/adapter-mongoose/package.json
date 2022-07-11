@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "mongodb": "4.7.0",
-    "mongoose": "6.4.3"
+    "mongoose": "6.4.4"
   },
   "peerDependencies": {
     "mongodb": "~4",

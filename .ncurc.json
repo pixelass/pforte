@@ -1,5 +1,5 @@
 {
   "upgrade": true,
   "deep": true,
-  "reject": ["/^@pforte/.*$/"]
+  "reject": ["/^@pforte/.*$/", "@types/node", "nanoid"]
 }
