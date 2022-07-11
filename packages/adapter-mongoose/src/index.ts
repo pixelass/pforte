@@ -43,23 +43,29 @@ interface GetUserProps {
 	user: GitHubUserType;
 	accessToken: AccessToken;
 	sessionToken: string;
+	csrfToken: string;
 	maxAge: number;
 }
 
 /**
  * Storage adapter
  */
-export interface Adapter {
-	(name: "session", payload: GetUserProps): Promise<UserType>;
-	(name: "user", payload: { sessionToken: string }): Promise<{ user: UserType } | null>;
-}
+
+export type UserAdapter = (name: "user", payload: GetUserProps) => Promise<UserType>;
+
+export type SessionAdapter = (
+	name: "session",
+	payload: { sessionToken: string; csrfToken: string }
+) => Promise<UserType | null>;
+
+export type Adapter = UserAdapter | SessionAdapter;
 
 async function getUser({
 	user,
 	accessToken,
 	sessionToken,
 	maxAge,
-}: GetUserProps): Promise<{ user: UserType }> {
+}: GetUserProps): Promise<UserType> {
 	// Check for an existing account
 	const existingAccount = await Account.findOne({
 		providerAccountId: user.id,
@@ -93,14 +99,12 @@ async function getUser({
 
 			// And return the existing user
 			return {
-				user: {
-					// Normalize the key for id:
-					// _id -> id
-					id: existingUser._id,
-					name: existingUser.name,
-					email: existingUser.email,
-					image: existingUser.image,
-				},
+				// Normalize the key for id:
+				// _id -> id
+				id: existingUser._id,
+				name: existingUser.name,
+				email: existingUser.email,
+				image: existingUser.image,
 			};
 		}
 	}
@@ -133,12 +137,10 @@ async function getUser({
 
 	// And return the new user
 	return {
-		user: {
-			id: newUser._id,
-			name: newUser.name,
-			email: newUser.email,
-			image: newUser.image,
-		},
+		id: newUser._id,
+		name: newUser.name,
+		email: newUser.email,
+		image: newUser.image,
 	};
 }
 
@@ -162,7 +164,7 @@ async function getSession({ sessionToken }: { sessionToken: string }): Promise<U
 export default function mongooseAdapter(connect: () => Promise<void>): Adapter {
 	return async function adapter(
 		type: "session" | "user",
-		payload: GetUserProps | { sessionToken: string }
+		payload: GetUserProps | { sessionToken: string; csrfToken: string }
 	) {
 		await connect();
 		switch (type) {
@@ -177,5 +179,5 @@ export default function mongooseAdapter(connect: () => Promise<void>): Adapter {
 			default:
 				break;
 		}
-	} as Adapter;
+	};
 }

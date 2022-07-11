@@ -1,13 +1,15 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import process from "node:process";
 
+import { Adapter, SessionAdapter } from "@pforte/adapter-mongoose";
+import { UserAdapter } from "@pforte/adapter-mongoose/dist";
 import {
 	AUTH_CSRF_COOKIE,
 	AUTH_SESSION_COOKIE,
 	CALLBACK_PATH,
 	DEFAULT_MAX_AGE,
 } from "@pforte/constants";
-import { GithubAccessToken } from "@pforte/provider-github";
+import { Provider } from "@pforte/provider-github/dist";
 import { getExpirationDate } from "@pforte/utils";
 import { CookieSerializeOptions, serialize } from "cookie";
 import { nanoid } from "nanoid";
@@ -24,6 +26,10 @@ export type MaybeArray<T> = T | T[];
  */
 export type Send<T> = (body: T) => void;
 
+interface ParsedQs {
+	[key: string]: undefined | string | string[] | ParsedQs | ParsedQs[];
+}
+
 /**
  * Next `API` route request
  */
@@ -31,9 +37,7 @@ export interface ApiRequest extends IncomingMessage {
 	/**
 	 * Object of `query` values from url
 	 */
-	query: Partial<{
-		[key: string]: string | string[];
-	}>;
+	query: ParsedQs;
 	/**
 	 * Object of `cookies` from header
 	 */
@@ -75,23 +79,6 @@ export interface User {
 	name: string;
 	email: string | null;
 	image: string | null;
-}
-
-/**
- * Auth provider
- */
-export interface Provider {
-	url: string;
-	name: string;
-	connect({ request: ApiRequest }): Promise<{ accessToken: GithubAccessToken; user: User }>;
-}
-
-/**
- * Storage adapter
- */
-export interface Adapter {
-	(name: "session", payload: any): Promise<User>;
-	(name: "user", payload: any): Promise<unknown>;
 }
 
 /**
@@ -204,8 +191,10 @@ export async function handleSession({ request }: { request: ApiRequest }, adapte
 			bodyValue,
 		});
 
-		// Only use the adapter when the toke is verified
-		return csrfTokenVerified ? await adapter("session", { sessionToken, csrfToken }) : null;
+		// Only use the adapter when the token is verified
+		return csrfTokenVerified
+			? await (adapter as SessionAdapter)("session", { sessionToken, csrfToken })
+			: null;
 	} else {
 		return null;
 	}
@@ -267,7 +256,7 @@ export default function pforte({
 							data: user
 								? {
 										user: {
-											id: user._id,
+											id: user.id,
 											name: user.name,
 											email: user.email,
 											image: user.image,
@@ -307,7 +296,7 @@ export default function pforte({
 									response,
 									maxAge,
 								});
-								return adapter("user", {
+								return (adapter as UserAdapter)("user", {
 									user,
 									accessToken,
 									sessionToken,
