@@ -3,14 +3,6 @@ import { getExpirationDate } from "@pforte/utils";
 import { Account, Session, User } from "./models";
 
 /**
- * GitHub specific access token
- */
-export interface GithubAccessToken {
-	access_token: string;
-	scope: string;
-	token_type: string;
-}
-/**
  * GitHub User model
  */
 export interface GitHubUserType {
