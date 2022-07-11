@@ -40,7 +40,7 @@ interface AccessToken {
 }
 
 interface GetUserProps {
-	user: GitHubUserType;
+	user: UserType;
 	accessToken: AccessToken;
 	sessionToken: string;
 	csrfToken: string;
@@ -55,7 +55,7 @@ export type UserAdapter = (name: "user", payload: GetUserProps) => Promise<UserT
 
 export type SessionAdapter = (
 	name: "session",
-	payload: { sessionToken: string; csrfToken: string }
+	payload: { sessionToken: string }
 ) => Promise<UserType | null>;
 
 export type Adapter = UserAdapter | SessionAdapter;
@@ -113,7 +113,7 @@ async function getUser({
 	const newUser = await User.create({
 		name: user.name,
 		email: user.email,
-		image: user.avatar_url,
+		image: user.image,
 	});
 	// And create a new account
 	await Account.create({

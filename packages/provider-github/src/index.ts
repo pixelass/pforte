@@ -14,6 +14,16 @@ export interface User {
 }
 
 /**
+ * GitHub User model
+ */
+export interface GitHubUser {
+	id: string;
+	name: string;
+	email: string | null;
+	avatar_url: string | null;
+}
+
+/**
  * GitHub specific configuration
  */
 interface GithubProviderConfig {
@@ -26,8 +36,11 @@ interface GithubProviderConfig {
  */
 export interface GithubAccessToken {
 	access_token: string;
-	scope: string;
+	expires_at: string;
+	refresh_token: string;
+	refresh_token_expires_in: string;
 	token_type: string;
+	scope: string;
 }
 
 /**
@@ -70,13 +83,16 @@ export default function githubProvider(config: GithubProviderConfig): Provider {
 			);
 
 			// Get user with access token
-			const { data: user } = await axios.get<User>("https://api.github.com/user", {
+			const { data: user } = await axios.get<GitHubUser>("https://api.github.com/user", {
 				headers: {
 					Authorization: `token ${accessToken.access_token}`,
 				},
 			});
 
-			return { user, accessToken };
+			return {
+				user: { id: user.id, name: user.name, email: user.email, image: user.avatar_url },
+				accessToken,
+			};
 		},
 	};
 }

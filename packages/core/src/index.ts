@@ -1,8 +1,7 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import process from "node:process";
 
-import { Adapter, SessionAdapter } from "@pforte/adapter-mongoose";
-import { UserAdapter } from "@pforte/adapter-mongoose/dist";
+import { Adapter, SessionAdapter, UserAdapter } from "@pforte/adapter-mongoose";
 import {
 	AUTH_CSRF_COOKIE,
 	AUTH_SESSION_COOKIE,
@@ -193,7 +192,7 @@ export async function handleSession({ request }: { request: ApiRequest }, adapte
 
 		// Only use the adapter when the token is verified
 		return csrfTokenVerified
-			? await (adapter as SessionAdapter)("session", { sessionToken, csrfToken })
+			? await (adapter as SessionAdapter)("session", { sessionToken })
 			: null;
 	} else {
 		return null;
@@ -300,7 +299,7 @@ export default function pforte({
 									user,
 									accessToken,
 									sessionToken,
-									csrfToken,
+									csrfToken: csrfToken.csrfToken,
 									maxAge,
 								});
 							}
