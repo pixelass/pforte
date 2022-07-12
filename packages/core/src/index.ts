@@ -8,7 +8,7 @@ import {
 	CALLBACK_PATH,
 	DEFAULT_MAX_AGE,
 } from "@pforte/constants";
-import { Provider } from "@pforte/provider-github/dist";
+import { Provider } from "@pforte/provider-github";
 import { getExpirationDate } from "@pforte/utils";
 import { CookieSerializeOptions, serialize } from "cookie";
 import { nanoid } from "nanoid";
@@ -182,6 +182,7 @@ export async function handleSession({ request }: { request: ApiRequest }, adapte
 	if (adapter) {
 		const cookieValue: string = request.cookies[AUTH_CSRF_COOKIE];
 		const { sessionToken, csrfToken } = request.body;
+		console.log(cookieValue, csrfToken);
 		const [bodyValue] = csrfToken.split("|");
 		const { csrfTokenVerified } = createCSRFToken({
 			options: { secret: process.env.PFORTE_SECRET || "pforte-secret" },
@@ -242,7 +243,6 @@ export default function pforte({
 }): ApiHandler {
 	const host = process.env.PFORTE_URL || process.env.VERCEL_URL || "http://localhost:3000";
 	const callbackPath = [host, CALLBACK_PATH].join("/");
-
 	return async function pforteHandler(request, response) {
 		const { query, method } = request;
 		switch (query.pforte) {
