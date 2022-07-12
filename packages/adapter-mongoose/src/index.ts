@@ -64,7 +64,6 @@ async function getUser({
 	});
 	// Create an expiration date for sessions
 	const expires = getExpirationDate(maxAge);
-
 	// When an account exists
 	if (existingAccount) {
 		// Then find the user
@@ -85,7 +84,7 @@ async function getUser({
 			// Then create a new session
 			await Session.create({
 				sessionToken,
-				userId: existingUser._idn,
+				userId: existingUser._id,
 				expires,
 			});
 
