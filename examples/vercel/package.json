@@ -20,7 +20,7 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.8.7",
+    "@mui/material": "5.9.0",
     "@pforte/adapter-mongoose": "^0.0.2",
     "@pforte/client": "^0.0.2",
     "@pforte/core": "^0.0.2",
@@ -32,7 +32,7 @@
     "nanoid": "3.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "vercel": "27.0.1",
+    "vercel": "27.0.2",
     "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
