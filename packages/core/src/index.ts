@@ -182,7 +182,6 @@ export async function handleSession({ request }: { request: ApiRequest }, adapte
 	if (adapter) {
 		const cookieValue: string = request.cookies[AUTH_CSRF_COOKIE];
 		const { sessionToken, csrfToken } = request.body;
-		console.log(cookieValue, csrfToken);
 		const [bodyValue] = csrfToken.split("|");
 		const { csrfTokenVerified } = createCSRFToken({
 			options: { secret: process.env.PFORTE_SECRET || "pforte-secret" },
