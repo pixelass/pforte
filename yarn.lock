@@ -1507,7 +1507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
   version: 7.18.6
   resolution: "@babel/runtime@npm:7.18.6"
   dependencies:
@@ -4952,12 +4952,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pforte/adapter-mongoose@^0.0.2, @pforte/adapter-mongoose@workspace:packages/adapter-mongoose":
+"@pforte/adapter-mongoose@^0.1.0, @pforte/adapter-mongoose@workspace:packages/adapter-mongoose":
   version: 0.0.0-use.local
   resolution: "@pforte/adapter-mongoose@workspace:packages/adapter-mongoose"
   dependencies:
-    "@pforte/constants": ^0.0.2
-    "@pforte/utils": ^0.0.2
+    "@pforte/constants": ^0.1.0
+    "@pforte/utils": ^0.1.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     "@types/node": ^16.11.43
@@ -4970,29 +4970,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/client@^0.0.2, @pforte/client@workspace:packages/client":
+"@pforte/client@^0.1.0, @pforte/client@workspace:packages/client":
   version: 0.0.0-use.local
   resolution: "@pforte/client@workspace:packages/client"
   dependencies:
-    "@pforte/constants": ^0.0.2
+    "@pforte/constants": ^0.1.0
     axios: 0.27.2
     js-cookie: 3.0.1
     type-fest: ^2.16.0
   languageName: unknown
   linkType: soft
 
-"@pforte/constants@^0.0.2, @pforte/constants@workspace:packages/constants":
+"@pforte/constants@^0.1.0, @pforte/constants@workspace:packages/constants":
   version: 0.0.0-use.local
   resolution: "@pforte/constants@workspace:packages/constants"
   languageName: unknown
   linkType: soft
 
-"@pforte/core@^0.0.2, @pforte/core@workspace:packages/core":
+"@pforte/core@^0.1.0, @pforte/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@pforte/core@workspace:packages/core"
   dependencies:
-    "@pforte/constants": ^0.0.2
-    "@pforte/utils": ^0.0.2
+    "@pforte/constants": ^0.1.0
+    "@pforte/utils": ^0.1.0
     "@types/cookie": ^0.5.1
     "@types/node": ^16.11.43
     axios: 0.27.2
@@ -5003,11 +5003,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/provider-github@^0.0.2, @pforte/provider-github@workspace:packages/provider-github":
+"@pforte/provider-github@^0.1.0, @pforte/provider-github@workspace:packages/provider-github":
   version: 0.0.0-use.local
   resolution: "@pforte/provider-github@workspace:packages/provider-github"
   dependencies:
-    "@pforte/constants": ^0.0.2
+    "@pforte/constants": ^0.1.0
     "@types/node": ^16.11.43
     axios: 0.27.2
     js-cookie: 3.0.1
@@ -5015,11 +5015,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/react@^0.0.2, @pforte/react@workspace:packages/react":
+"@pforte/react@^0.1.0, @pforte/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@pforte/react@workspace:packages/react"
   dependencies:
-    "@pforte/client": ^0.0.2
+    "@pforte/client": ^0.1.0
     "@types/js-cookie": ^3.0.2
     js-cookie: 3.0.1
     react: ^18.2.0
@@ -5031,7 +5031,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/utils@^0.0.2, @pforte/utils@workspace:packages/utils":
+"@pforte/utils@^0.1.0, @pforte/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@pforte/utils@workspace:packages/utils"
   dependencies:
@@ -10462,11 +10462,11 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.0
-    "@pforte/adapter-mongoose": ^0.0.2
-    "@pforte/client": ^0.0.2
-    "@pforte/core": ^0.0.2
-    "@pforte/provider-github": ^0.0.2
-    "@pforte/react": ^0.0.2
+    "@pforte/adapter-mongoose": ^0.1.0
+    "@pforte/client": ^0.1.0
+    "@pforte/core": ^0.1.0
+    "@pforte/provider-github": ^0.1.0
+    "@pforte/react": ^0.1.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     axios: 0.27.2
@@ -10498,11 +10498,11 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.0
-    "@pforte/adapter-mongoose": ^0.0.2
-    "@pforte/client": ^0.0.2
-    "@pforte/core": ^0.0.2
-    "@pforte/provider-github": ^0.0.2
-    "@pforte/react": ^0.0.2
+    "@pforte/adapter-mongoose": ^0.1.0
+    "@pforte/client": ^0.1.0
+    "@pforte/core": ^0.1.0
+    "@pforte/provider-github": ^0.1.0
+    "@pforte/react": ^0.1.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     axios: 0.27.2
@@ -10527,11 +10527,11 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.0
-    "@pforte/adapter-mongoose": ^0.0.2
-    "@pforte/client": ^0.0.2
-    "@pforte/core": ^0.0.2
-    "@pforte/provider-github": ^0.0.2
-    "@pforte/react": ^0.0.2
+    "@pforte/adapter-mongoose": ^0.1.0
+    "@pforte/client": ^0.1.0
+    "@pforte/core": ^0.1.0
+    "@pforte/provider-github": ^0.1.0
+    "@pforte/react": ^0.1.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     axios: 0.27.2
@@ -10540,6 +10540,7 @@ __metadata:
     nanoid: 3.3.4
     react: 18.2.0
     react-dom: 18.2.0
+    react-router-dom: 6.3.0
     react-scripts: ^5.0.1
     vercel: 27.0.2
     zustand: ^4.0.0-rc.1
@@ -11532,6 +11533,15 @@ __metadata:
   bin:
     he: bin/he
   checksum: 3d4d6babccccd79c5c5a3f929a68af33360d6445587d628087f39a965079d84f18ce9c3d3f917ee1e3978916fc833bb8b29377c3b403f919426f91bc6965e7a7
+  languageName: node
+  linkType: hard
+
+"history@npm:^5.2.0":
+  version: 5.3.0
+  resolution: "history@npm:5.3.0"
+  dependencies:
+    "@babel/runtime": ^7.7.6
+  checksum: d73c35df49d19ac172f9547d30a21a26793e83f16a78386d99583b5bf1429cc980799fcf1827eb215d31816a6600684fba9686ce78104e23bd89ec239e7c726f
   languageName: node
   linkType: hard
 
@@ -17333,6 +17343,30 @@ __metadata:
   version: 0.9.0
   resolution: "react-refresh@npm:0.9.0"
   checksum: 6440146176f19402ffb7d66f317e40b1c42c88579b4d439b49021e38be6307c642da3e8732a72e6997b6bb1127db0da92f4aa433da4313ce8ebad0c1efa2ed4a
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:6.3.0":
+  version: 6.3.0
+  resolution: "react-router-dom@npm:6.3.0"
+  dependencies:
+    history: ^5.2.0
+    react-router: 6.3.0
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 77603a654f8a8dc7f65535a2e5917a65f8d9ffcb06546d28dd297e52adcc4b8a84377e0115f48dca330b080af2da3e78f29d590c89307094d36927d2b1751ec3
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.3.0":
+  version: 6.3.0
+  resolution: "react-router@npm:6.3.0"
+  dependencies:
+    history: ^5.2.0
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 7be673f5e72104be01e6ab274516bdb932efd93305243170690f6560e3bd1035dd1df3d3c9ce1e0f452638a2529f43a1e77dcf0934fc8031c4783da657be13ca
   languageName: node
   linkType: hard
 
