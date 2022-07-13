@@ -18,7 +18,7 @@
   "repository": "git@github.com:pixelass/pforte.git",
   "author": "Gregor Adams <greg@pixelass.com>",
   "license": "AGPL-3.0-or-later",
-  "source": "src/index.ts",
+  "source": "src/index.tsx",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types.d.ts",
