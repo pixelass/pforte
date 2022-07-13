@@ -40,5 +40,6 @@
     "@types/mongodb": "^4.0.7",
     "@types/mongoose": "^5.11.97",
     "react-scripts": "^5.0.1"
-  }
+  },
+  "private": true
 }

@@ -46,5 +46,6 @@
     "@types/mongoose": "^5.11.97",
     "nodemon": "^2.0.19",
     "react-scripts": "^5.0.1"
-  }
+  },
+  "private": true
 }
