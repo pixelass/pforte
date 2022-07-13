@@ -3614,18 +3614,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/base@npm:5.0.0-alpha.88":
-  version: 5.0.0-alpha.88
-  resolution: "@mui/base@npm:5.0.0-alpha.88"
+"@mui/base@npm:5.0.0-alpha.89":
+  version: 5.0.0-alpha.89
+  resolution: "@mui/base@npm:5.0.0-alpha.89"
   dependencies:
     "@babel/runtime": ^7.17.2
     "@emotion/is-prop-valid": ^1.1.3
     "@mui/types": ^7.1.4
-    "@mui/utils": ^5.8.6
+    "@mui/utils": ^5.9.0
     "@popperjs/core": ^2.11.5
-    clsx: ^1.2.0
+    clsx: ^1.2.1
     prop-types: ^15.8.1
-    react-is: ^17.0.2
+    react-is: ^18.2.0
   peerDependencies:
     "@types/react": ^17.0.0 || ^18.0.0
     react: ^17.0.0 || ^18.0.0
@@ -3633,7 +3633,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 4e7278310450c370e6c0d573100c3143fa5096dd8582d4ccadaeccd2cf98735df31a8c0900885fef039d296752e459ab3be8cbaccf79cf82da6b244cd5562b45
+  checksum: 2ff57943d7fb80acd715e81fcd589f797e1038685cc13e63b8cef26534a08a2c8158af7d39e36ee53ad17b288e7c63b58d854e783fd3d3490e8ba5b1592b64cd
   languageName: node
   linkType: hard
 
@@ -3653,20 +3653,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/material@npm:5.8.7":
-  version: 5.8.7
-  resolution: "@mui/material@npm:5.8.7"
+"@mui/material@npm:5.9.0":
+  version: 5.9.0
+  resolution: "@mui/material@npm:5.9.0"
   dependencies:
     "@babel/runtime": ^7.17.2
-    "@mui/base": 5.0.0-alpha.88
-    "@mui/system": ^5.8.7
+    "@mui/base": 5.0.0-alpha.89
+    "@mui/system": ^5.9.0
     "@mui/types": ^7.1.4
-    "@mui/utils": ^5.8.6
+    "@mui/utils": ^5.9.0
     "@types/react-transition-group": ^4.4.5
-    clsx: ^1.2.0
+    clsx: ^1.2.1
     csstype: ^3.1.0
     prop-types: ^15.8.1
-    react-is: ^17.0.2
+    react-is: ^18.2.0
     react-transition-group: ^4.4.2
   peerDependencies:
     "@emotion/react": ^11.5.0
@@ -3681,16 +3681,16 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 3dffeda204432ba6f2316d020f71a57002b72cf65bcdf4c1b88058f6fe185bf97a917f5919fae0a9fd496e9c71c0a6ca2da473951990bff79fa8153ea8125169
+  checksum: f3c59521ce4ca7c67cab72247c9b07b5e082d7d9c094634b063e2745b55badd747a204b9717e98ee4814f7552019f827ffeeb2ac875fbb2a45528d16170ede9b
   languageName: node
   linkType: hard
 
-"@mui/private-theming@npm:^5.8.6":
-  version: 5.8.6
-  resolution: "@mui/private-theming@npm:5.8.6"
+"@mui/private-theming@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "@mui/private-theming@npm:5.9.0"
   dependencies:
     "@babel/runtime": ^7.17.2
-    "@mui/utils": ^5.8.6
+    "@mui/utils": ^5.9.0
     prop-types: ^15.8.1
   peerDependencies:
     "@types/react": ^17.0.0 || ^18.0.0
@@ -3698,7 +3698,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 8a821793de22f84ba51bee2f67363e26187d1fddc7b2d446477a3fa2131372662a30ec0d94678a3cecab0f7ed8d3116af19422cb651664e5bca664d243478ed4
+  checksum: 183379b19f74e2684d25736a078b3d0821041ce780c7b7c682c9a620c284565633ab9f4351efa999a827e6bdfac81266c3ec4788fe458232f122009d4eed9894
   languageName: node
   linkType: hard
 
@@ -3723,16 +3723,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/system@npm:^5.8.7":
-  version: 5.8.7
-  resolution: "@mui/system@npm:5.8.7"
+"@mui/system@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "@mui/system@npm:5.9.0"
   dependencies:
     "@babel/runtime": ^7.17.2
-    "@mui/private-theming": ^5.8.6
+    "@mui/private-theming": ^5.9.0
     "@mui/styled-engine": ^5.8.7
     "@mui/types": ^7.1.4
-    "@mui/utils": ^5.8.6
-    clsx: ^1.2.0
+    "@mui/utils": ^5.9.0
+    clsx: ^1.2.1
     csstype: ^3.1.0
     prop-types: ^15.8.1
   peerDependencies:
@@ -3747,7 +3747,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 703ab43ba94cbddf42ea875767d7fa9e848e6853148548e6980a5b81b26e179a50998f92a30c9d76e0e69e2feadf6d1924023c8490481fe316343be367b70912
+  checksum: 3b9ec87dce7567ff86c68f375b5870eb337791f93c5464f0bcd0a73d48d988cb0e3bbf5d6d809d79f87d3f6a55c86b4cb58954b586653db4c1332a392322f8a2
   languageName: node
   linkType: hard
 
@@ -3763,18 +3763,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/utils@npm:^5.8.6":
-  version: 5.8.6
-  resolution: "@mui/utils@npm:5.8.6"
+"@mui/utils@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "@mui/utils@npm:5.9.0"
   dependencies:
     "@babel/runtime": ^7.17.2
     "@types/prop-types": ^15.7.5
     "@types/react-is": ^16.7.1 || ^17.0.0
     prop-types: ^15.8.1
-    react-is: ^17.0.2
+    react-is: ^18.2.0
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
-  checksum: 5141fa15050defe8981041d9a699a595e1b554d5a20125d8e4de2188fb37b37a45907c36ca9885840290f32133af2cb4340e724afdd0f59d27dcf8b863f927bf
+  checksum: 93c25d492fe0160a3628db4554a9f32423cdd1684ff9296f1cc45f85fefaff9b2574e0df7ada7336f4843b8e6e57cdd5487520580c434f7e2c7a84eb3b9a8807
   languageName: node
   linkType: hard
 
@@ -6015,7 +6015,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.30.5, @typescript-eslint/eslint-plugin@npm:^5.5.0":
+"@typescript-eslint/eslint-plugin@npm:^5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.30.6"
+  dependencies:
+    "@typescript-eslint/scope-manager": 5.30.6
+    "@typescript-eslint/type-utils": 5.30.6
+    "@typescript-eslint/utils": 5.30.6
+    debug: ^4.3.4
+    functional-red-black-tree: ^1.0.1
+    ignore: ^5.2.0
+    regexpp: ^3.2.0
+    semver: ^7.3.7
+    tsutils: ^3.21.0
+  peerDependencies:
+    "@typescript-eslint/parser": ^5.0.0
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: ee020a171c057a99061ca70583473df1beb0df3229b4c9404b85d4a6ce96b03708935e2aa4418d74a877337d407ca30cdf53c9cf2f7b9eec0d79288d245267d1
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/eslint-plugin@npm:^5.5.0":
   version: 5.30.5
   resolution: "@typescript-eslint/eslint-plugin@npm:5.30.5"
   dependencies:
@@ -6049,7 +6072,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.30.5, @typescript-eslint/parser@npm:^5.5.0":
+"@typescript-eslint/parser@npm:^5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/parser@npm:5.30.6"
+  dependencies:
+    "@typescript-eslint/scope-manager": 5.30.6
+    "@typescript-eslint/types": 5.30.6
+    "@typescript-eslint/typescript-estree": 5.30.6
+    debug: ^4.3.4
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 3e02bb447d21af65adefbaddb46380ced3fb88045ef2e122d6522cc354d414898cd2222b4ce05fa0ee1fbc8c01e9a7833fe57e52b844e3fba30c89d20e006b56
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/parser@npm:^5.5.0":
   version: 5.30.5
   resolution: "@typescript-eslint/parser@npm:5.30.5"
   dependencies:
@@ -6076,6 +6116,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/scope-manager@npm:5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/scope-manager@npm:5.30.6"
+  dependencies:
+    "@typescript-eslint/types": 5.30.6
+    "@typescript-eslint/visitor-keys": 5.30.6
+  checksum: 454c32339869694a400c6e3e4e44729da3c02359cb086c1e9315e2aeb93af3a6e1c87d274f9eb0066a081f99e4ffda3a036565d17c78dd8649d19f18199419c6
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/type-utils@npm:5.30.5":
   version: 5.30.5
   resolution: "@typescript-eslint/type-utils@npm:5.30.5"
@@ -6092,10 +6142,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/type-utils@npm:5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/type-utils@npm:5.30.6"
+  dependencies:
+    "@typescript-eslint/utils": 5.30.6
+    debug: ^4.3.4
+    tsutils: ^3.21.0
+  peerDependencies:
+    eslint: "*"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 19b9479961c07e66230d73f9a396e5352bcdf6fa3f5fc175fad86ac617783fa61a5db53c872025974c196a44452b3b10afb0dd10b661dce37d04b2b86ee25ba2
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/types@npm:5.30.5":
   version: 5.30.5
   resolution: "@typescript-eslint/types@npm:5.30.5"
   checksum: c70420618cb875d4e964a20a3fa4cf40cb97a8ad3123e24860e3d829edf3b081c77fa1fe25644700499d27e44aee5783abc7765deee61e2ef59a928db96b2175
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/types@npm:5.30.6"
+  checksum: 47c621dae5929d5b39b2b27c6f2ecb8daab1da22566867443873c0681322019f99e205629910bfe04e64077349aec05c84e0d4571f189619b609f4173a9d0f36
   languageName: node
   linkType: hard
 
@@ -6117,6 +6190,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/typescript-estree@npm:5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/typescript-estree@npm:5.30.6"
+  dependencies:
+    "@typescript-eslint/types": 5.30.6
+    "@typescript-eslint/visitor-keys": 5.30.6
+    debug: ^4.3.4
+    globby: ^11.1.0
+    is-glob: ^4.0.3
+    semver: ^7.3.7
+    tsutils: ^3.21.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 5621c03f1a6ca8866d91014cd30b53a37f9c4d664eb97bc2740294bcbf7efc0178e8699def752b86c97472e7b1b0cd9b6c0d9aa07a04decfe78bd16c21f93c4b
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/utils@npm:5.30.5, @typescript-eslint/utils@npm:^5.10.0, @typescript-eslint/utils@npm:^5.13.0":
   version: 5.30.5
   resolution: "@typescript-eslint/utils@npm:5.30.5"
@@ -6133,6 +6224,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/utils@npm:5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/utils@npm:5.30.6"
+  dependencies:
+    "@types/json-schema": ^7.0.9
+    "@typescript-eslint/scope-manager": 5.30.6
+    "@typescript-eslint/types": 5.30.6
+    "@typescript-eslint/typescript-estree": 5.30.6
+    eslint-scope: ^5.1.1
+    eslint-utils: ^3.0.0
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  checksum: fc6f9ccf558d658cbeaa85c63bc1853385630c9522c8ae42524b652a6b3c69689fba67a49d79ce1fae2b4ec9c45e5aa9b791ac027d205edef27984d088ed1c3a
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/visitor-keys@npm:5.30.5":
   version: 5.30.5
   resolution: "@typescript-eslint/visitor-keys@npm:5.30.5"
@@ -6143,10 +6250,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/visitor-keys@npm:5.30.6":
+  version: 5.30.6
+  resolution: "@typescript-eslint/visitor-keys@npm:5.30.6"
+  dependencies:
+    "@typescript-eslint/types": 5.30.6
+    eslint-visitor-keys: ^3.3.0
+  checksum: e4ec0541d685d211274724c9f1887b6cdd03c7fc4fbdd1ea74c18311c3a5a9a2d4c676448ea714687ca13cc881ec5c73605de75fbf38f302ba8ea86d2b77897f
+  languageName: node
+  linkType: hard
+
 "@vercel/build-utils@npm:5.0.1":
   version: 5.0.1
   resolution: "@vercel/build-utils@npm:5.0.1"
   checksum: cadfedab7950da3d09f4f75cd68cba8ba106c7285c2451f8589d6f33899b2e826fddb3697d5675375f75c715c5a795d28d7723ce98d4b0f3214fbe9c567dcc6a
+  languageName: node
+  linkType: hard
+
+"@vercel/build-utils@npm:5.0.2":
+  version: 5.0.2
+  resolution: "@vercel/build-utils@npm:5.0.2"
+  checksum: 3b76a4a42bcb7f46c1c9245e71c8822da85be9630c944377ffa392050ea0828efd79daef649f3d7f08c89a6f42f8cc490226b7732cdb4510c0d33eea2d154b80
   languageName: node
   linkType: hard
 
@@ -6157,6 +6281,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/go@npm:2.0.6":
+  version: 2.0.6
+  resolution: "@vercel/go@npm:2.0.6"
+  checksum: 864a007c465233d14ff493e6889e14094ee590bab96bec920d8eb47797e7306530f769027873e3ea989f9463cbe5839957fb85c572cb3a50fb2a209913a023c7
+  languageName: node
+  linkType: hard
+
 "@vercel/hydrogen@npm:0.0.2":
   version: 0.0.2
   resolution: "@vercel/hydrogen@npm:0.0.2"
@@ -6164,10 +6295,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/hydrogen@npm:0.0.3":
+  version: 0.0.3
+  resolution: "@vercel/hydrogen@npm:0.0.3"
+  checksum: 107567970c09a15adc5b28d04b2cec6c0c4d2affc3e6bd8ac1882dff98584da0772554c5e91d9a1e85f51f9584741a34525b342aaacd1160b3a68c4c464c5bfc
+  languageName: node
+  linkType: hard
+
 "@vercel/next@npm:3.1.4":
   version: 3.1.4
   resolution: "@vercel/next@npm:3.1.4"
   checksum: f43eba5c89422796e71e237032dbcb09cc55f4f3d555e40124c9ba25716a49aad4fd386805574a956cb1f538fba445d6361d1968a8faf176bdb5dbfc66b4350c
+  languageName: node
+  linkType: hard
+
+"@vercel/next@npm:3.1.5":
+  version: 3.1.5
+  resolution: "@vercel/next@npm:3.1.5"
+  checksum: 97881cb517c3ec9e2f46326084bb19d6767eef39ee021a63d692278e5b40502d806c05b1ab1e90af19619f3daedb71d6ecd9657f6c40d3d3324844729c510705
   languageName: node
   linkType: hard
 
@@ -6198,9 +6343,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.4.1":
-  version: 2.4.1
-  resolution: "@vercel/node@npm:2.4.1"
+"@vercel/node@npm:2.4.2":
+  version: 2.4.2
+  resolution: "@vercel/node@npm:2.4.2"
   dependencies:
     "@types/node": "*"
     "@vercel/build-utils": 5.0.1
@@ -6212,7 +6357,25 @@ __metadata:
     node-fetch: 2.6.1
     ts-node: 8.9.1
     typescript: 4.3.4
-  checksum: 67cae23905e0ca218bf307ef7500706c1b98f614b7d8180467ca4a5d5ef579c079ef2037396e8a496bd99399cf782eef388fa77c2bf6d4e75d43c6524d47d044
+  checksum: ef0823e3688f54a5a4d5cb40d5d7f2cabb058cddbdc40954c21fcbb514f3fb1f4abe3e073f2e7a370429761c6e8a8c5675cda079a48a959bbe33c5a1ce4343a2
+  languageName: node
+  linkType: hard
+
+"@vercel/node@npm:2.4.3":
+  version: 2.4.3
+  resolution: "@vercel/node@npm:2.4.3"
+  dependencies:
+    "@types/node": "*"
+    "@vercel/build-utils": 5.0.2
+    "@vercel/node-bridge": 3.0.0
+    "@vercel/static-config": 2.0.1
+    edge-runtime: 1.0.1
+    esbuild: 0.14.47
+    exit-hook: 2.2.1
+    node-fetch: 2.6.1
+    ts-node: 8.9.1
+    typescript: 4.3.4
+  checksum: b5fa2898360119714968eb79ead4a716e6f6adbc6de6126530a1863709d7e6209cf1eeabd66776eb605a493fe748b3e22abb8411972ce82b2119345ee8c7d825
   languageName: node
   linkType: hard
 
@@ -6220,6 +6383,13 @@ __metadata:
   version: 3.0.5
   resolution: "@vercel/python@npm:3.0.5"
   checksum: 3294434b49bf1338bb5cadc7d1ffb78e9e4d31cad0c2ba36cc4f504b2082f394c4285387a48e2fc3b8d948a9dea622eb63425fd663708a9a94beb9fb30df9b4d
+  languageName: node
+  linkType: hard
+
+"@vercel/python@npm:3.0.6":
+  version: 3.0.6
+  resolution: "@vercel/python@npm:3.0.6"
+  checksum: b6625cf7b180717e8d73048034f93f110d812dffe0847dfaab55e48c730c3d0e631cbb59ec336e30633e245c36c1df94fc65821f5630ad94dfe75bb33a5ae683
   languageName: node
   linkType: hard
 
@@ -6234,12 +6404,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/redwood@npm:1.0.7":
+  version: 1.0.7
+  resolution: "@vercel/redwood@npm:1.0.7"
+  dependencies:
+    "@vercel/nft": 0.20.1
+    "@vercel/routing-utils": 1.13.5
+    semver: 6.1.1
+  checksum: 8785d043084d5b015b40a1c3cc6ab24733fb58cf65b9e510ddbb23eeb10224882bdb0afa9fd3b7915de79e2bd2bfc3814a1ca96016893e76f020a77a77ba243f
+  languageName: node
+  linkType: hard
+
 "@vercel/remix@npm:1.0.7":
   version: 1.0.7
   resolution: "@vercel/remix@npm:1.0.7"
   dependencies:
     "@vercel/nft": 0.20.1
   checksum: 0aa1899c5539f7c18ddd1737e8bb5ada741b20cee642dae57bdd3ec2b3d57eaf7b2f925446d0cd80489f189e6652366e0d759a4441b794e9a4b5813df9b230d5
+  languageName: node
+  linkType: hard
+
+"@vercel/remix@npm:1.0.8":
+  version: 1.0.8
+  resolution: "@vercel/remix@npm:1.0.8"
+  dependencies:
+    "@vercel/nft": 0.20.1
+  checksum: 864757b24f82ddf644503693dcd75439a3b9a242f1ca10bb90257a06735b7e2d61a83945373ac64a3b4a63a97cd89158214d441fdc657e98e64a0dfdcb4ebf3d
   languageName: node
   linkType: hard
 
@@ -6263,10 +6453,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/ruby@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@vercel/ruby@npm:1.3.14"
+  checksum: 63ca959e271b4b3ce6d1760721541fdfe0087c4faece30125113db2022514d71df7134c93d280b181e801e60defff38967b5310bf13e075b834b1451fcd2a93f
+  languageName: node
+  linkType: hard
+
 "@vercel/static-build@npm:1.0.5":
   version: 1.0.5
   resolution: "@vercel/static-build@npm:1.0.5"
   checksum: ed9df3f88d741bfda5a04b4b00d7128f08e7ca8122d8e0098c3e08c8725146974f14b55f9be691a4e73da00416fd84d3bfae4d0568cd18d41625f52d0cfc897b
+  languageName: node
+  linkType: hard
+
+"@vercel/static-build@npm:1.0.6":
+  version: 1.0.6
+  resolution: "@vercel/static-build@npm:1.0.6"
+  checksum: eb221f2a99f419b8e5b4f87fec12ea57845a79d8877010103750d425e944b3414ab6ffb41464ea53d18fae63e13c98d01cd3b35ceaf001ead2cf0dfc8d33fde7
   languageName: node
   linkType: hard
 
@@ -7893,7 +8097,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.2.0":
+"clsx@npm:^1.2.1":
   version: 1.2.1
   resolution: "clsx@npm:1.2.1"
   checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
@@ -10257,7 +10461,7 @@ __metadata:
     "@emotion/react": 11.9.3
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
-    "@mui/material": 5.8.7
+    "@mui/material": 5.9.0
     "@pforte/adapter-mongoose": ^0.0.2
     "@pforte/client": ^0.0.2
     "@pforte/core": ^0.0.2
@@ -10293,7 +10497,7 @@ __metadata:
     "@emotion/react": 11.9.3
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
-    "@mui/material": 5.8.7
+    "@mui/material": 5.9.0
     "@pforte/adapter-mongoose": ^0.0.2
     "@pforte/client": ^0.0.2
     "@pforte/core": ^0.0.2
@@ -10322,7 +10526,7 @@ __metadata:
     "@emotion/react": 11.9.3
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
-    "@mui/material": 5.8.7
+    "@mui/material": 5.9.0
     "@pforte/adapter-mongoose": ^0.0.2
     "@pforte/client": ^0.0.2
     "@pforte/core": ^0.0.2
@@ -10337,7 +10541,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-scripts: ^5.0.1
-    vercel: 27.0.1
+    vercel: 27.0.2
     zustand: ^4.0.0-rc.1
   languageName: unknown
   linkType: soft
@@ -15724,8 +15928,8 @@ __metadata:
     "@types/node": ^16.11.43
     "@types/react": ^18.0.15
     "@types/react-dom": ^18.0.6
-    "@typescript-eslint/eslint-plugin": ^5.30.5
-    "@typescript-eslint/parser": ^5.30.5
+    "@typescript-eslint/eslint-plugin": ^5.30.6
+    "@typescript-eslint/parser": ^5.30.6
     eslint: ^8.19.0
     eslint-config-prettier: ^8.5.0
     eslint-config-react-app: ^7.0.1
@@ -15744,7 +15948,7 @@ __metadata:
     ts-node: ^10.8.2
     type-fest: ^2.16.0
     typescript: ^4.7.4
-    vercel: ^27.0.1
+    vercel: ^27.0.2
   languageName: unknown
   linkType: soft
 
@@ -17104,14 +17308,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^17.0.1, react-is@npm:^17.0.2":
+"react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
   languageName: node
   linkType: hard
 
-"react-is@npm:^18.0.0":
+"react-is@npm:^18.0.0, react-is@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
@@ -19764,15 +19968,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:27.0.1, vercel@npm:^27.0.1":
-  version: 27.0.1
-  resolution: "vercel@npm:27.0.1"
+"vercel@npm:27.0.2":
+  version: 27.0.2
+  resolution: "vercel@npm:27.0.2"
   dependencies:
     "@vercel/build-utils": 5.0.1
     "@vercel/go": 2.0.5
     "@vercel/hydrogen": 0.0.2
     "@vercel/next": 3.1.4
-    "@vercel/node": 2.4.1
+    "@vercel/node": 2.4.2
     "@vercel/python": 3.0.5
     "@vercel/redwood": 1.0.6
     "@vercel/remix": 1.0.7
@@ -19782,7 +19986,29 @@ __metadata:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 714647d89d9051c18f3ffd9641691b17a378cd7759646decde21bdec4853a88790c74bd21ce6b9feb3a8ceaece918337870b916eec3d85ff4ec36d3dfa09413a
+  checksum: b9f814a3b3729ab502f83137336b454740a01bef89870e458f861c93684086ed2bfb4a9981a30b6e5b136d52449068142e6b84b28c1208862164291053a170d9
+  languageName: node
+  linkType: hard
+
+"vercel@npm:^27.0.2":
+  version: 27.1.0
+  resolution: "vercel@npm:27.1.0"
+  dependencies:
+    "@vercel/build-utils": 5.0.2
+    "@vercel/go": 2.0.6
+    "@vercel/hydrogen": 0.0.3
+    "@vercel/next": 3.1.5
+    "@vercel/node": 2.4.3
+    "@vercel/python": 3.0.6
+    "@vercel/redwood": 1.0.7
+    "@vercel/remix": 1.0.8
+    "@vercel/ruby": 1.3.14
+    "@vercel/static-build": 1.0.6
+    update-notifier: 5.1.0
+  bin:
+    vc: dist/index.js
+    vercel: dist/index.js
+  checksum: daa763dbdcfd3ec9a2f1199eb2fca32d0fee88bbeb53c498a0377be0909d347b029cfdc28a8b11e3e412453af0523cab542a9322ecaf974c032e1d791aee1fa5
   languageName: node
   linkType: hard
 
