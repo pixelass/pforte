@@ -1,6 +1,6 @@
 {
   "name": "@pforte/react",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Utilities for web auth",
   "keywords": [
     "react",
@@ -31,7 +31,7 @@
     "watch": "parcel watch"
   },
   "dependencies": {
-    "@pforte/client": "^0.0.2",
+    "@pforte/client": "^0.1.0",
     "@types/js-cookie": "^3.0.2",
     "js-cookie": "3.0.1",
     "type-fest": "^2.16.0"
