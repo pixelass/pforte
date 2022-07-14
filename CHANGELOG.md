@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/pixelass/pforte/compare/v0.2.0...v0.2.1) (2022-07-14)
+
+### Bug Fixes
+
+- **@pforte/core:** remove httpOnly until implemented ([c349a2c](https://github.com/pixelass/pforte/commit/c349a2c61d60b44041288c51b3c44f6ecb7acd3c))
+
 # [0.2.0](https://github.com/pixelass/pforte/compare/v0.1.0...v0.2.0) (2022-07-13)
 
 ### Features
