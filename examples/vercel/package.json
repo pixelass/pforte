@@ -14,7 +14,8 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "start": "yarn dlx cross-env DISABLE_ESLINT_PLUGIN=true vercel dev"
+    "start": "yarn dlx cross-env DISABLE_ESLINT_PLUGIN=true vercel dev",
+    "build": "react-scripts build"
   },
   "dependencies": {
     "@emotion/react": "11.9.3",
