@@ -149,8 +149,7 @@ export function extendHandler({
 			options: {
 				path: "/",
 				secure: process.env.NODE_ENV === "production",
-				httpOnly: process.env.NODE_ENV === "production",
-				hostOnly: process.env.NODE_ENV === "production",
+				httpOnly: false,
 				sameSite: "Lax",
 				expires,
 			},
@@ -161,8 +160,7 @@ export function extendHandler({
 			options: {
 				path: "/",
 				secure: process.env.NODE_ENV === "production",
-				httpOnly: process.env.NODE_ENV === "production",
-				hostOnly: process.env.NODE_ENV === "production",
+				httpOnly: false,
 				sameSite: "Lax",
 			},
 		}
