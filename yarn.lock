@@ -4952,12 +4952,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pforte/adapter-mongoose@^0.1.0, @pforte/adapter-mongoose@workspace:packages/adapter-mongoose":
+"@pforte/adapter-mongoose@^0.2.0, @pforte/adapter-mongoose@workspace:packages/adapter-mongoose":
   version: 0.0.0-use.local
   resolution: "@pforte/adapter-mongoose@workspace:packages/adapter-mongoose"
   dependencies:
-    "@pforte/constants": ^0.1.0
-    "@pforte/utils": ^0.1.0
+    "@pforte/constants": ^0.2.0
+    "@pforte/utils": ^0.2.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     "@types/node": ^16.11.43
@@ -4970,29 +4970,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/client@^0.1.0, @pforte/client@workspace:packages/client":
+"@pforte/client@^0.2.0, @pforte/client@workspace:packages/client":
   version: 0.0.0-use.local
   resolution: "@pforte/client@workspace:packages/client"
   dependencies:
-    "@pforte/constants": ^0.1.0
+    "@pforte/constants": ^0.2.0
     axios: 0.27.2
     js-cookie: 3.0.1
     type-fest: ^2.16.0
   languageName: unknown
   linkType: soft
 
-"@pforte/constants@^0.1.0, @pforte/constants@workspace:packages/constants":
+"@pforte/constants@^0.2.0, @pforte/constants@workspace:packages/constants":
   version: 0.0.0-use.local
   resolution: "@pforte/constants@workspace:packages/constants"
   languageName: unknown
   linkType: soft
 
-"@pforte/core@^0.1.0, @pforte/core@workspace:packages/core":
+"@pforte/core@^0.2.0, @pforte/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@pforte/core@workspace:packages/core"
   dependencies:
-    "@pforte/constants": ^0.1.0
-    "@pforte/utils": ^0.1.0
+    "@pforte/constants": ^0.2.0
+    "@pforte/utils": ^0.2.0
     "@types/cookie": ^0.5.1
     "@types/node": ^16.11.43
     axios: 0.27.2
@@ -5003,11 +5003,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/provider-github@^0.1.0, @pforte/provider-github@workspace:packages/provider-github":
+"@pforte/provider-github@^0.2.0, @pforte/provider-github@workspace:packages/provider-github":
   version: 0.0.0-use.local
   resolution: "@pforte/provider-github@workspace:packages/provider-github"
   dependencies:
-    "@pforte/constants": ^0.1.0
+    "@pforte/constants": ^0.2.0
     "@types/node": ^16.11.43
     axios: 0.27.2
     js-cookie: 3.0.1
@@ -5015,11 +5015,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/react@^0.1.0, @pforte/react@workspace:packages/react":
+"@pforte/react@^0.2.0, @pforte/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@pforte/react@workspace:packages/react"
   dependencies:
-    "@pforte/client": ^0.1.0
+    "@pforte/client": ^0.2.0
     "@types/js-cookie": ^3.0.2
     js-cookie: 3.0.1
     react: ^18.2.0
@@ -5031,7 +5031,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pforte/utils@^0.1.0, @pforte/utils@workspace:packages/utils":
+"@pforte/utils@^0.2.0, @pforte/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@pforte/utils@workspace:packages/utils"
   dependencies:
@@ -10462,11 +10462,11 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.0
-    "@pforte/adapter-mongoose": ^0.1.0
-    "@pforte/client": ^0.1.0
-    "@pforte/core": ^0.1.0
-    "@pforte/provider-github": ^0.1.0
-    "@pforte/react": ^0.1.0
+    "@pforte/adapter-mongoose": ^0.2.0
+    "@pforte/client": ^0.2.0
+    "@pforte/core": ^0.2.0
+    "@pforte/provider-github": ^0.2.0
+    "@pforte/react": ^0.2.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     axios: 0.27.2
@@ -10498,11 +10498,11 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.0
-    "@pforte/adapter-mongoose": ^0.1.0
-    "@pforte/client": ^0.1.0
-    "@pforte/core": ^0.1.0
-    "@pforte/provider-github": ^0.1.0
-    "@pforte/react": ^0.1.0
+    "@pforte/adapter-mongoose": ^0.2.0
+    "@pforte/client": ^0.2.0
+    "@pforte/core": ^0.2.0
+    "@pforte/provider-github": ^0.2.0
+    "@pforte/react": ^0.2.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     axios: 0.27.2
@@ -10527,11 +10527,11 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.0
-    "@pforte/adapter-mongoose": ^0.1.0
-    "@pforte/client": ^0.1.0
-    "@pforte/core": ^0.1.0
-    "@pforte/provider-github": ^0.1.0
-    "@pforte/react": ^0.1.0
+    "@pforte/adapter-mongoose": ^0.2.0
+    "@pforte/client": ^0.2.0
+    "@pforte/core": ^0.2.0
+    "@pforte/provider-github": ^0.2.0
+    "@pforte/react": ^0.2.0
     "@types/mongodb": ^4.0.7
     "@types/mongoose": ^5.11.97
     axios: 0.27.2
