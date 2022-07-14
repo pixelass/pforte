@@ -14,7 +14,9 @@
     ".": "./dist/index.js"
   },
   "scripts": {
+    "predev": "cp tsconfig.development.json tsconfig.json",
     "start": "yarn dlx cross-env DISABLE_ESLINT_PLUGIN=true vercel dev",
+    "prebuild": "cp tsconfig.production.json tsconfig.json",
     "build": "react-scripts build"
   },
   "dependencies": {
